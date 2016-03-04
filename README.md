@@ -1,1 +1,3 @@
-# lupa
+# Sistema Lupa    
+
+Projeto para tcc
