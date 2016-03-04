@@ -1,3 +1,3 @@
 # Sistema Lupa    
 
-Projeto para tcc
+Projeto para tcc IFMS
