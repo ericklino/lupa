@@ -1,7 +1,11 @@
 class CreateDevices < ActiveRecord::Migration
   def change
     create_table :devices do |t|
-      t.string :name
+      t.string :model_device
+      t.string :processor
+      t.string :os
+      t.string :size_device
+      t.string :type_device
       t.string :phone_img
       t.integer :mark_id
       #t.references :mark, index: true, foreign_key: true
