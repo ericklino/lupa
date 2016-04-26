@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'question/evaluation'
+
   get 'device/index_device'
 
   get 'device_controller/index_device'
