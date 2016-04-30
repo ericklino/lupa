@@ -1,5 +1,7 @@
 class QuestionController < ApplicationController
   def evaluation
-    @category = Category.all 
+    @categories = Category.all
+    #@questions = Question.all
+    @alternatives = Alternative.all
   end
 end

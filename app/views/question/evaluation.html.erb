@@ -27,11 +27,26 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                  <% if current_user.present? %>
-                    <h1></h1>
-                    <%else%>
-                    <h1>Seja bem vindo ao LUPA meu Jovem</h1>
-                    <% end %>
+
+                    <% @categories.each do |category| %>
+                    <h2><%=category.description%></h2>
+
+                    <% category.questions.each do |question|%>
+                      <h4><%=question.enunciation %></h4>
+                      <h4><%=question.category.description %></h4>
+
+                    <% question.alternatives.each do |alternative|%>
+                      <input type="radio" name="aternative"> <%=alternative.description%>
+
+
+                    <%end%>
+                    <%end%>
+                    <%end%>
+
+                    <% @alternatives.each do |alternative|%>
+                    <input type="radio" name="aternative"> <%=alternative.description%>
+
+                    <%end%>
 
                     <p>Lupa é um sistema para o apoio da avaliação da acessibilidade e usabilidade em dispositivos móveis abordando o usuário com necessidade especial visual</p>
                     <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {sessions: "sessions"}
 
@@ -19,6 +21,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get 'dispositivos' => 'device#index_device'
+
+  get 'avaliacao' => 'question#evaluation'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
