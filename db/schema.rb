@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20160429233254) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "enunciation"
+    t.integer  "type_question", default: 0 , null: false
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
