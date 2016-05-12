@@ -95,11 +95,11 @@ ActiveRecord::Schema.define(version: 20160429233254) do
   end
 
   create_table "questions", force: :cascade do |t|
+    t.integer  "type_question"
     t.string   "enunciation"
-    t.integer  "type_question", default: 0 , null: false
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
- enum type_question: [ :Acessibilidade, :Usabilidade ]
+ enum type_question:  [:accessibility, :usability]
   belongs_to :category
   # belongs_to :kind
   has_and_belongs_to_many :alternatives
