@@ -1,0 +1,49 @@
+pt-BR:
+  activerecord:
+    models:
+      user: "Usuários"
+      question: "Questões"
+      mark: "Marcas"
+      kind: "Tipo"
+      device: "Dispositivos"
+      category: "Categorias"
+      alternative: "Alternativas"
+      diagnostic: "Diagnósticos"
+
+    attributes:
+      user:
+        password: "Senha"
+        password_confirmation: "Confirmar senha"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+
+      question:
+        enunciation: "Enunciado"
+        type_question: "Tipo da Questão"
+        category: "Categoria"
+
+      mark:
+        name: "Nome"
+
+      kind:
+        description: "Descrição"
+
+      device:
+        model_device: "Modelo do Dispositivo"
+        processor: "Processador"
+        os: "S.O"
+        size_device: "Tamanho do Dispositivo"
+        type_device: "Tipo do Dispositivo"
+        phone_img : "Imagem do Dispositivo"
+
+      category:
+        description: "Descrição"
+
+      alternative:
+        description: "Descrição"
+        weight: "Peso"
+        kind: "Tipo"
+
+      diagnostic:
+        description: "Descrição"
+        score: "Pontuação"

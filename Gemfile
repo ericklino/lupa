@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+gem 'rails-i18n'
+gem 'rails-env'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -23,8 +26,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "font-awesome-rails"
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rails_admin'#, git: 'git:github.com/luizpicolo/rails_admin.git'
+gem 'rails_admin'
+gem 'rails_admin-i18n'
 gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'devise-i18n'
 gem 'cancancan'
 gem 'carrierwave'
 gem 'sprockets-rails'#, github: 'rails/sprockets-rails'

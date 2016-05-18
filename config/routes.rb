@@ -20,9 +20,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  get 'dispositivos' => 'device#index_device'
+  get 'dispositivos' => 'devices#index_device'
 
-  get 'avaliacao' => 'question#evaluation'
+  get 'avaliacao' => 'question#evaluation', as: :evaluations
+  post 'avaliacao' => 'question#create_evaluation'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
