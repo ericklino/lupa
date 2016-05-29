@@ -11,6 +11,10 @@ RailsAdmin.config do |config|
   ## == Cancan ==
    config.authorize_with :cancan
 
+   config.navigation_static_links = {
+  'Relatórios' => 'http://www.google.com'
+}
+
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
@@ -54,18 +58,42 @@ RailsAdmin.config do |config|
         field :type_question
         field :enunciation
         field :category
-        field :alternative
+
       end
+
       edit do
         field :enunciation
         field :type_question
         field :category
-        field :alternative  
+        field :alternatives
+
       end
 
       show do
 
       end
+end
+
+#------------Config avaliação ----------------------"
+  config.model "Evaluation" do
+
+    list do
+      field :user
+      field :device
+      field :score
+      field :status
+    end
+
+    edit do
+      field :user
+      field :device
+      field :score
+      field :status
+    end
+
+    show do
+
+    end
 end
 #------------Config alternativa ----------------------"
   config.model "Alternative" do

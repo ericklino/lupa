@@ -2,7 +2,87 @@
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+
  */
+
+/*    form. avaliação  */
+
+#painel{
+  margin-top: 50px;
+}
+
+input[type="radio"]{
+
+}
+
+.ajuste{
+  margin-top:12px;
+  margin-right:40px;
+  display: inline-block;
+}
+
+#box-acessibilidade{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#box-usabilidade{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+/*    botoes  */
+.painel{
+  float:right;
+}
+
+.btn-cancelar{
+  color: white;
+  background-color:#4cb7ef;
+}
+
+.btn-grande{
+  width: 200px;
+}
+
+.btn-medio{
+  width:150px;
+}
+.btn-pequeno{
+    width: 10%;
+
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+
+
+/**/
 
 /* Toggle Styles */
 

@@ -36,8 +36,10 @@
                     <% @devices.each do |device| %>
                     <div id="divPBaixo"class="coluna-4">
                       <img> <%= image_tag device.phone_img_url(:thumb)%></img>
-                    
-                      <button type="button" class="btn btn-primary">Avaliar</button>
+
+                      <%= link_to "Avaliar", evaluations_path(device: device), class: "btn btn-primary"  %>
+
+                      <!-- <button type="button" class="btn btn-primary">Avaliar</button> -->
                     </div>
                    <% end %>
 
