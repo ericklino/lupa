@@ -5,6 +5,27 @@
 
  */
 
+/*table*/
+
+#table-evaluation{
+  margin-top: 35px;
+
+}
+
+thead{
+  background-color:#4cb7ef;
+  color:white;
+
+}
+.table-evaluation-thead th{
+  border-right: solid 2px rgba(255, 255, 255, 0.8);
+}
+.table-evaluation-thead th:last-child{
+  border-right: none;
+}
+
+
+
 /*    form. avaliação  */
 
 #painel{

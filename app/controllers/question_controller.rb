@@ -26,13 +26,13 @@ class QuestionController < ApplicationController
     list_question = []
     score_acessibilidade = 0;
     score_usabilidade = 0;
-    a = 0;
+    score_total = [];
 
 
     params.each do |question|
       list_question<<question[1];
 
-      a +=1;
+
     end
 #------------------------if--------------------#
   list_question.each do |q|
@@ -49,11 +49,10 @@ class QuestionController < ApplicationController
 
 
 #------------------------if--------------------#
-#    opcao = Alternative.find(@list_question);
-#    @score_acessibilidade = opcao.weight;
+
+  score_total<<score_acessibilidade;
+  score_total<<score_usabilidade;
 aaa
-
-
 
   end
 
