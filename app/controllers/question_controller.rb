@@ -52,7 +52,6 @@ class QuestionController < ApplicationController
 
   score_total<<score_acessibilidade;
   score_total<<score_usabilidade;
-aaa
 
   end
 

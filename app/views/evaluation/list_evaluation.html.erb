@@ -52,31 +52,17 @@
     </tr>
   </thead>
   <tbody>
+    <% @evaluations.each do |eva| %>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><%=eva.id%></th>
+      <td><%=eva.id%></td>
+      <td><%=eva.id%></td>
+      <td><%=eva.id%></td>
     </tr>
+    <%end%>
     </tbody>
 </table>
 
-
-
-
-
-
-
-
-
-        <% @evaluations.each do |eva| %>
-          <p>Id: <%=eva.id%></p>
-          <% if eva.score.blank?%>
-          <p>Score: Nao tem</p>
-          <% else %>
-          <p>Score: <%=eva.score%></p>
-          <%end%>
-        <%end%>
 
       </div>
     </div>
