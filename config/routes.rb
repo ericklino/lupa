@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   post 'avaliacao' => 'question#create_evaluation'
 
 
-  get 'minhasavaliacoes' => 'evarailluation#list_evaluation'
+  get 'minhasavaliacoes' => 'evaluation#list_evaluation'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

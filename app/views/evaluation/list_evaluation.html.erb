@@ -35,7 +35,7 @@
       <div class="col-lg-12">
         <% if current_user.present? %>
           <h1 class="centraliza">
-            Minhas avaliações(<%=current_user.email%>)
+            Minhas Avaliações
           </h1>
         <%else%>
           <h1>Minhas</h1>
@@ -45,19 +45,19 @@
   <table id="table-evaluation" class="table">
   <thead class="thead-default">
     <tr class="table-evaluation-thead">
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Número Avaliação</th>
+      <th>Modelo do Aparelho</th>
+      <th>Diagnostico Acessibilidade</th>
+      <th>Diagnostico Usabilidade</th>
     </tr>
   </thead>
   <tbody>
     <% @evaluations.each do |eva| %>
     <tr>
       <th scope="row"><%=eva.id%></th>
-      <td><%=eva.id%></td>
-      <td><%=eva.id%></td>
-      <td><%=eva.id%></td>
+      <td><%=eva.device.model_device%></td>
+      <td><%= eva.score_acessibilidade %> pts - <%= Diagnostic.result eva.score_acessibilidade, 0 %></td>
+      <td><%= eva.score_usabilidade %> pts - <%= Diagnostic.result eva.score_usabilidade, 1 %></td>
     </tr>
     <%end%>
     </tbody>

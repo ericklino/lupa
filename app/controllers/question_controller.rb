@@ -11,12 +11,16 @@ class QuestionController < ApplicationController
     evaluation = Evaluation.new
     evaluation.user = current_user
     evaluation.device_id = params[:evaluation][:device_id].to_i
-    evaluation.score = soma_ponto(params[:question])
+    score = soma_ponto(params[:question])
+    evaluation.score_acessibilidade = score.first
+    evaluation.score_usabilidade = score.last
 
     if evaluation.save
-      redirect_to :back, flash: { success: "Deu bom" }
+      flash['success'] = "Deu bom"
+      redirect_to :back
     else
-      redirect_to :back, flash: { error: "Deu ruim" }
+      flash['error'] = "Deu ruim"
+      redirect_to :back
     end
   end
 
@@ -54,10 +58,4 @@ class QuestionController < ApplicationController
   score_total<<score_usabilidade;
 
   end
-
-
-
-
-
-
 end

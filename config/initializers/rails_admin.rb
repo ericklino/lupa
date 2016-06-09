@@ -78,16 +78,15 @@ end
   config.model "Evaluation" do
 
     list do
+      field :id
       field :user
       field :device
-      field :score
       field :status
     end
 
     edit do
       field :user
       field :device
-      field :score
       field :status
     end
 
@@ -140,11 +139,13 @@ end
       field :id
       field :description
       field :score
+      field :type_diagnostic
     end
 
     edit do
       field :description
       field :score
+      field :type_diagnostic
 
     end
 
