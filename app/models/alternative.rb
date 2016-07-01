@@ -4,4 +4,8 @@ class Alternative < ActiveRecord::Base
 
 
   validates :description, :weight, :kind, presence: true
+
+  def name
+    description
+  end
 end

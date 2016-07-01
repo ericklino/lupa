@@ -1,6 +1,16 @@
 class DevicesController < ApplicationController
-  
+
   def index_device
-  @devices = Device.all
+    if params[:search]
+      @device = Device.search(params[:search])
+    else
+      @device = Device.all.order :id
+    end
   end
+
+
+
+
+
+
 end

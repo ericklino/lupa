@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'band/index_band'
+
   get 'question/evaluation'
 
   get 'device/index_device'
@@ -13,20 +15,29 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {sessions: "sessions"}
 
 
-  ##resources:device
+#  resources:dispositivos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
-  get 'dispositivos' => 'devices#index_device'
+  root 'band#index_band'
+  get 'dispositivos' => 'devices#index_device', as: :devices
+
+  get 'home' => 'home#index', as: :home
+
+
+
+
 
   get 'avaliacao' => 'question#evaluation', as: :evaluations
   post 'avaliacao' => 'question#create_evaluation'
 
 
   get 'minhasavaliacoes' => 'evaluation#list_evaluation'
+
+  # reports
+  get 'relatorios/avaliacoes' => 'reports#evaluation', as: :report_evaluation
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

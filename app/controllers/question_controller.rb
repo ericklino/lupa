@@ -1,6 +1,6 @@
 class QuestionController < ApplicationController
   def evaluation
-    @categories = Category.all
+    @categories = Category.all.order :id
     #@questions = Question.all
     @alternatives = Alternative.all
 
@@ -16,10 +16,10 @@ class QuestionController < ApplicationController
     evaluation.score_usabilidade = score.last
 
     if evaluation.save
-      flash['success'] = "Deu bom"
-      redirect_to :back
+      flash['success'] = "Avaliação Realizada com Sucesso"
+      redirect_to root_path
     else
-      flash['error'] = "Deu ruim"
+      flash['error'] = "Verifique"
       redirect_to :back
     end
   end

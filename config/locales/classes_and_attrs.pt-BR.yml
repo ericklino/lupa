@@ -47,3 +47,5 @@ pt-BR:
       diagnostic:
         description: "Descrição"
         score: "Pontuação"
+        type_diagnostic: "Tipo Diagnostico"
+      

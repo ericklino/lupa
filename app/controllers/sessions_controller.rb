@@ -11,7 +11,7 @@ def create
     if current_user.admin?
       redirect_to rails_admin_path
     else
-      redirect_to root_path
+      redirect_to home_path
     end
 end
 

@@ -3,7 +3,7 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
 
- */
+
 
 /*table*/
 
@@ -24,6 +24,42 @@ thead{
   border-right: none;
 }
 
+/*Form. search*/
+
+#para-error{
+  margin:0 auto;
+  width:500px;
+  margin-top:100px;
+}
+
+#trapezio-descendente{
+  font-size: 1.5em;
+}
+
+#procurar{
+  width:150px;
+  border-radius: 5px;
+  border:none;
+  font-size: 1.5em;
+  color: white;
+  background-color:#4cb7ef;
+}
+
+#procure{
+  height:30px;
+  width:250px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border:solid 1px black;
+  text-align:center;
+
+}
+
+#box-search{
+  margin-left:550px;
+  float:left;
+  margin-top:-47px;
+}
 
 
 /*    form. avaliação  */
@@ -52,6 +88,7 @@ input[type="radio"]{
   margin-bottom: 10px;
 }
 
+/*lista dos dispositivos*/
 
 
 
@@ -67,6 +104,10 @@ input[type="radio"]{
 .btn-cancelar{
   color: white;
   background-color:#4cb7ef;
+  font-size: 1.2em;
+}
+.btn-success{
+  font-size: 1.2em;
 }
 
 .btn-grande{
@@ -102,8 +143,24 @@ html[xmlns] .clearfix {
 }
 
 
+/*Tela dos dispositivos*/
 
-/**/
+#image-device{
+text-align: center;
+}
+
+#name-device{
+  margin-top: 5px;
+  font-size: 1.4em;
+}
+#divPBaixo{
+  margin-top:100px;
+  width: 240px;
+}
+
+/* FIM DOS DISṔOSITIVOS*/
+
+
 
 /* Toggle Styles */
 
@@ -118,18 +175,14 @@ html[xmlns] .clearfix {
 #wrapper.toggled {
     padding-left: 250px;
 }
-#divPBaixo{
-  margin-top:50px;
-}
+
 .coluna-4{
   width:25%;
   float:left;
   margin-right: 8%;
 
 }
-img{
-  text-align:center;
-}
+
 .centraliza{
   text-align:center;
 }
@@ -139,6 +192,7 @@ h2{
 }
 .btn-primary{
   background-color:#4cb7ef;
+  font-size: 1.2em;
   width:100%;
 }
 
