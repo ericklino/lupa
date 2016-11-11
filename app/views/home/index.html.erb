@@ -1,35 +1,19 @@
 
-  <% if current_user.present? %>
+<% if current_user.present? %>
 <div id="wrapper">
-
-  <%= render 'layouts/menu' %>
-
+<%= render 'layouts/menu' %>
   <div id="page-content-wrapper">
     <div class="container-fluid">
       <div class="row">
-
         <div class="col-lg-12">
-
-
           <h1>Seja bem vindo ao LUPA </h1>
-
-
-
-
-          <p>Lupa é um sistema para o apoio da avaliação da acessibilidade e
-          usabilidade em dispositivos móveis abordando o usuário com necessidade
-          especial visual
-          </p>
-
-          <p>Make sure to keep all page content within the
-            <code>#page-content-wrapper</code>.
-          </p>
-
+          <p>Lupa é um sistema para o apoio da avaliação da acessibilidade e usabilidade em dispositivos móveis abordando o usuário com necessidade especial visual</p>
+          <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 <%else%>
-<h1>Faca o Login no endereço localhost/admin</h1>
+<h1><code>Faca o Login no endereço localhost/admin</code></h1>
 <% end %>

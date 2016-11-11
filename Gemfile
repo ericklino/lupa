@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.3.1'
 
 
 gem 'rails', '4.2.1'
@@ -17,14 +17,14 @@ gem 'jbuilder', '~> 2.0'
 
 gem "font-awesome-rails"
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rails_admin'
+gem 'rails_admin', github: 'luizpicolo/rails_admin'
 gem 'rails_admin-i18n'
 gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'devise-i18n'
 gem 'cancancan'
 gem 'carrierwave'
-gem 'sprockets-rails'#, github: 'rails/sprockets-rails'
+gem 'sprockets-rails', github: 'rails/sprockets-rails'
 gem 'mini_magick'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'alert_message'
