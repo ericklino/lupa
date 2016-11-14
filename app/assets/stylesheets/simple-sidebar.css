@@ -10,11 +10,21 @@ body{
 
 }
 
-
+.section__capa{
+  padding-top: 100px;
+  border: solid 1px black;
+  margin: 0 auto;
+  width: 100%;
+}
+.section__capa h1{
+  text-align: center;
+}
 .header{
-    width:100%;
+  position: fixed;
+  top: 0;
+  width:100%;
   background: #4cb7ef;
-  height: 120px;
+  height: 70px;
 }
 .header__title{
   width:100px;
@@ -34,46 +44,134 @@ margin-top: 5px;
 
 .logo{
   margin: 0;
+  margin-top: 15px;
+  margin-left: 40px;
+  float:left;
 }
 
 .logo__icon{
   color: white;
-  float:left;
-  font-size: 2.5em;
 }
 
 .logo__text{
   display: none;
 }
 .nav{
-  width: 250px;
+  width: 350px;
   float: right;
-  margin:40px;
+  margin:25px;
   margin-left: 50px;
 }
-
 .ul-remove{
   padding: 0;
 }
 .li{
   list-style: none;
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 25px;
 }
-
-.li i {
+.login a span{
+  color: #4cb7ef;
+}
+.li span {
   color: white;
 }
-
+.li a{
+  color: white;
+}
+.login a {
+  color: #4cb7ef;
+}
+.span-nav-logo{
+  margin-right: 10px;
+}
 .login{
-
-E#(ceZQ8t)Ky
-
+  text-align: center;
+  font-size: 1.4em;
+  border-radius: 10px;
+  background: white;
+  width: 100px;
+}
+.corpo{
+  font-size: 1.4em;
 }
 
+.section__item{
+  margin-left: 1%;
+  margin-bottom: 5%;
 
+}
+.section__text{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  line-height: 1.6em;
+  color: #777;
+}
 
+.container{
+    margin-top: 4%;
+  margin-left: 5%;
+  width: 50%;
+  float: left;
+}
+.section__title--secondary{
+  width: 100%;
 
+  background: #4cb7ef;
+  line-height: 1.6em;
+  font-size: 1.9em;
+  color: white;
+}
+ .container_utonium{
+   text-align: center;
+   margin-left: 3%;
+   margin-top: 6%;
+   width: 40%;
+   float: left;
+ }
+
+/*============  Quem somos ===================*/
+
+.section__quemsomos{
+  border: solid 1px black;
+
+}
+.section__titulo--quemsomos{
+  text-align: center;
+}
+.article__quemsomos{  
+  width: 100%;
+}
+.article__titulo--quemsomos{
+  padding-left: 10px;
+  margin-left: 20px;
+  width: 96.5%;
+  background: #4cb7ef;
+  color: white;
+  line-height: 1.6em;
+  font-size: 1.9em;
+}
+
+.container_img_article{
+
+  border-radius: 10px;
+  float: left;
+  margin: 20px;
+  width: 15%;
+  height: 200px;
+}
+.img_article{
+  width: 100%;
+  border-radius: 10px;
+}
+.article__text{
+
+  float: left;
+  margin-top: 20px;
+  line-height: 1.6em;
+  color: #777;
+  width: 80%;
+}
 
 
 
