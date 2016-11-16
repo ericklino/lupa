@@ -6,14 +6,17 @@
 
 /* CAPA */
 
-body{
-
+.titulo-so{
+  color:#05ACCD;
+  line-height: 1.6em;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .section__capa{
   padding-top: 100px;
-  border: solid 1px black;
   margin: 0 auto;
+  margin-bottom: 50px;
   width: 100%;
 }
 .section__capa h1{
@@ -109,37 +112,40 @@ margin-top: 5px;
 }
 
 .container{
-    margin-top: 4%;
+  margin-top: 30px;
   margin-left: 5%;
   width: 50%;
   float: left;
 }
 .section__title--secondary{
   width: 100%;
-
   background: #4cb7ef;
   line-height: 1.6em;
   font-size: 1.9em;
   color: white;
+  text-align: center;
 }
  .container_utonium{
    text-align: center;
    margin-left: 3%;
-   margin-top: 6%;
+   margin-top: 90px;
    width: 40%;
    float: left;
  }
 
 /*============  Quem somos ===================*/
-
+.container__quemsomos{
+  margin-left: 5%;
+}
 .section__quemsomos{
   border: solid 1px black;
+  margin-top: 50px;
 
 }
 .section__titulo--quemsomos{
   text-align: center;
 }
-.article__quemsomos{  
+.article__quemsomos{
   width: 100%;
 }
 .article__titulo--quemsomos{

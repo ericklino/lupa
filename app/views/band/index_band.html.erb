@@ -14,13 +14,16 @@
     </h1>
     <nav class="nav">
       <ul class="ul-remove">
-        <li class="li corpo"><a href="#"><span class="fa fa-child  span-nav-logo"></span>Quem Somos</a></li>
+        <li class="li corpo"><a href="#qsomos"><span class="fa fa-child  span-nav-logo"></span>Quem Somos</a></li>
         <li class="li login"><a href="<%= rails_admin_path%>"><span class="fa fa-sign-in  span-nav-logo"></span>Sign in</a></li>
       </ul>
     </nav>
   </header>
-  <section class="section__capa  clearfix">
-    <h1>Você Sabia ?</h1>
+  <section class="section__capa" >
+    <h1 class="titulo-so">Lupa: Sistema de Apoio para Avaliação da Usabilidade e Acessibilidade Móvel</h1>
+  </section>
+  <section class="  clearfix">
+    <h1 class="titulo-so">Você Sabia ?</h1>
 
     <div class="container clearfix">
         <article class="section__item">
@@ -61,26 +64,45 @@
         <%= image_tag "prof_utonium.gif", :class => "img_utonium"%>
       </div>
   </section>
-  <section class="section__quemsomos">
-    <h1 class="section__titulo--quemsomos">Quem somos</h1>
+  <section id="qsomos" class="section__quemsomos">
+    <h1  class="section__titulo--quemsomos titulo-so">Quem somos</h1>
+    <div class="container__quemsomos">
+      <article class="article__quemsomos clearfix">
+          <h1 class="article__titulo--quemsomos">Erick Lino Pedro</h1>
+          <div class="container_img_article">
+          <%= image_tag "Erick.jpg" , :class=> "img_article"%>
+          </div>
+          <div class="article__text">
+            <p>
+              é acadêmico do curso de Tecnologia em Análise e Desenvolvimento de
+              Sistemas do Instituto Federal de Educação, Ciência e Tecnologia de
+              Mato Grosso do Sul (IFMS), campus Nova Andradina, onde atua como
+              aluno pesquisador no Núcleo Interdisciplinar de Pesquisa, Estudo e
+              Desenvolvimento em Tecnologia da Informação (NIPETI). Desenvolve
+              estudos na área de Engenharia de Software, atuando principalmente
+               com Usabilidade de Sistemas.
+          </p>
+        </div>
+    </article>
     <article class="article__quemsomos clearfix">
-      <h1 class="article__titulo--quemsomos">Erick Lino Pedro</h1>
-      <div class="container_img_article">
+        <h1 class="article__titulo--quemsomos">Erick Lino Pedro</h1>
+        <div class="container_img_article">
         <%= image_tag "Erick.jpg" , :class=> "img_article"%>
-      </div>
-      <div class="article__text">
-        <p>
-          é acadêmico do curso de Tecnologia em Análise e Desenvolvimento de
-          Sistemas do Instituto Federal de Educação, Ciência e Tecnologia de
-          Mato Grosso do Sul (IFMS), campus Nova Andradina, onde atua como
-          aluno pesquisador no Núcleo Interdisciplinar de Pesquisa, Estudo e
-          Desenvolvimento em Tecnologia da Informação (NIPETI). Desenvolve
-          estudos na área de Engenharia de Software, atuando principalmente
-           com Usabilidade de Sistemas.
+        </div>
+        <div class="article__text">
+          <p>
+            é acadêmico do curso de Tecnologia em Análise e Desenvolvimento de
+            Sistemas do Instituto Federal de Educação, Ciência e Tecnologia de
+            Mato Grosso do Sul (IFMS), campus Nova Andradina, onde atua como
+            aluno pesquisador no Núcleo Interdisciplinar de Pesquisa, Estudo e
+            Desenvolvimento em Tecnologia da Informação (NIPETI). Desenvolve
+            estudos na área de Engenharia de Software, atuando principalmente
+             com Usabilidade de Sistemas.
         </p>
       </div>
-    </article>
-  </section>
+  </article>
+  </div>
+</section>
 
 
 
