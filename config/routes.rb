@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  get 'home/test' => 'home#test', as: :test_home
+
 
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -29,15 +31,16 @@ Rails.application.routes.draw do
 
 
 
-
+  #avaliacao
   get 'avaliacao' => 'question#evaluation', as: :evaluations
   post 'avaliacao' => 'question#create_evaluation'
-
-
   get 'minhasavaliacoes' => 'evaluation#list_evaluation'
 
+
   # reports
+  get 'dispositivos/selecao' => 'reports#index', as: :device_seletion
   get 'relatorios/avaliacoes' => 'reports#evaluation', as: :report_evaluation
+  get 'dispositivo/relatorio/:id' => 'reports#show', as: :report
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

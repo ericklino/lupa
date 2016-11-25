@@ -28,6 +28,8 @@ pt-BR:
       kind:
         description: "Descrição"
 
+
+
       device:
         model_device: "Modelo do Dispositivo"
         processor: "Processador"
@@ -35,9 +37,11 @@ pt-BR:
         size_device: "Tamanho do Dispositivo"
         type_device: "Tipo do Dispositivo"
         phone_img : "Imagem do Dispositivo"
+        mark: "Marca"
 
       category:
         description: "Descrição"
+
 
       alternative:
         description: "Descrição"
@@ -48,4 +52,3 @@ pt-BR:
         description: "Descrição"
         score: "Pontuação"
         type_diagnostic: "Tipo Diagnostico"
-      
