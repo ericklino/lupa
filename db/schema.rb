@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20160608235610) do
   add_index "evalutions_questions", ["question_id", "evalution_id"], name: "index_evalutions_questions_on_question_id_and_evalution_id", using: :btree
 
   create_table "kinds", force: :cascade do |t|
-    t.string   "description"
+    t.integer  "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

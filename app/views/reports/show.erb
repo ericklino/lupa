@@ -1,0 +1,29 @@
+<link href="../../assets/stylesheets/simple-sidebar.css" rel="stylesheet">
+<div id="wrapper">
+  <%= render 'layouts/menu' %>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <% if current_user.present? %>
+          <h1 id ="texto-titulo" class="centraliza">Relatório </h1>
+          <% end %>
+          <div id="divPBaixo"class="coluna-4 clearfix">
+            <div id="image-device">
+              <%= image_tag @device.phone_img_url(:thumb) %>
+            </div>
+            <div class="container-ficha-tecnica">
+              <p id="name-device" class="centraliza"><%= @device.model_device%> </p>
+              <p id="name-device" class="centraliza"><%= @device.mark.name%> </p>
+              <p id="name-device" class="centraliza"><%= @device.processor%> </p>
+              <p id="name-device" class="centraliza"><%= @device.os%> </p>
+              <p id="name-device" class="centraliza"><%= @device.size_device%> </p>
+              <p id="name-device" class="centraliza"><%= @device.type_device%> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

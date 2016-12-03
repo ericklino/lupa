@@ -5,7 +5,9 @@
 
 
 /* CAPA */
-
+.titulo-menor{
+  font-size: 30px;
+}
 .titulo-so{
   color:#05ACCD;
   line-height: 1.6em;
