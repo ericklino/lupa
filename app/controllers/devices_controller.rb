@@ -4,7 +4,7 @@ class DevicesController < ApplicationController
     if params[:search]
       @device = Device.search(params[:search])
     else
-      @device = Device.all.order :id
+      @device = Device.order :id
     end
   end
 

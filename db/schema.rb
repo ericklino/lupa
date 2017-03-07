@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608235610) do
+ActiveRecord::Schema.define(version: 20170306204833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20160608235610) do
   create_table "alternatives", force: :cascade do |t|
     t.string   "description"
     t.integer  "weight"
-    t.integer  "kind_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "type_alternative"
   end
 
   create_table "alternatives_questions", id: false, force: :cascade do |t|
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20160608235610) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "devices", ["mark_id"], name: "index_devices_on_mark_id", using: :btree
+
   create_table "diagnostics", force: :cascade do |t|
     t.text     "description"
     t.integer  "score"
@@ -60,36 +62,19 @@ ActiveRecord::Schema.define(version: 20160608235610) do
 
   create_table "evaluations", force: :cascade do |t|
     t.datetime "date_evaluation"
-    t.boolean  "status"
+    t.boolean  "status",               default: false
     t.integer  "user_id"
     t.integer  "device_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "diagnostic_id"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.integer  "score_usabilidade"
     t.integer  "score_acessibilidade"
+    t.integer  "quiz_id"
   end
 
-  create_table "evaluations_questions", force: :cascade do |t|
-    t.integer  "evalution_id"
-    t.integer  "question_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "evalutions_questions", id: false, force: :cascade do |t|
-    t.integer "evalution_id", null: false
-    t.integer "question_id",  null: false
-  end
-
-  add_index "evalutions_questions", ["evalution_id", "question_id"], name: "index_evalutions_questions_on_evalution_id_and_question_id", using: :btree
-  add_index "evalutions_questions", ["question_id", "evalution_id"], name: "index_evalutions_questions_on_question_id_and_evalution_id", using: :btree
-
-  create_table "kinds", force: :cascade do |t|
-    t.integer  "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
+  add_index "evaluations", ["device_id"], name: "index_evaluations_on_device_id", using: :btree
+  add_index "evaluations", ["quiz_id"], name: "index_evaluations_on_quiz_id", using: :btree
+  add_index "evaluations", ["user_id"], name: "index_evaluations_on_user_id", using: :btree
 
   create_table "marks", force: :cascade do |t|
     t.string   "name"
@@ -103,6 +88,17 @@ ActiveRecord::Schema.define(version: 20160608235610) do
     t.integer  "category_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "quiz_id"
+  end
+
+  add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
+
+  create_table "quizzes", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "type"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -124,4 +120,9 @@ ActiveRecord::Schema.define(version: 20160608235610) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "devices", "marks"
+  add_foreign_key "evaluations", "devices"
+  add_foreign_key "evaluations", "quizzes"
+  add_foreign_key "evaluations", "users"
+  add_foreign_key "questions", "quizzes"
 end

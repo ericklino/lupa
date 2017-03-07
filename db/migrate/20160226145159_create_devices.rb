@@ -7,8 +7,7 @@ class CreateDevices < ActiveRecord::Migration
       t.string :size_device
       t.string :type_device
       t.string :phone_img
-      t.integer :mark_id
-      #t.references :mark, index: true, foreign_key: true
+      t.references :mark, index: true, foreign_key: true
 
       t.timestamps null: false
     end

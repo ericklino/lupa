@@ -14,28 +14,10 @@
           <% end %>
 
           <div id="box-search" class="clearfix">
-          <%= form_tag devices_path, :method => 'get', id: "search-form" do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Procurar...", id:"procure"%>
-          <%= submit_tag "Procurar", id:"procurar", :name => nil%>
-          <% end %>
+            <%= render 'layouts/device/search' %>
           </div>
 
-          <%if @device.present?%>
-
-          <% @device.each do |device| %>
-          <div id="divPBaixo"class="coluna-4 clearfix">
-            <div id="image-device">
-             <%= image_tag device.phone_img_url(:thumb)%>
-            </div>
-            <p id="name-device" class="centraliza"><%= device.model_device%> </p>
-            <%= link_to "Avaliar", evaluations_path(device: device), class: "btn btn-primary"  %>
-          </div>
-          <%end%>
-          <%else%>
-          <div id="para-error">
-          <p id="trapezio-descendente">Desculpe-me porém, não foi encontrado nada com este nome: " <%= params[:search]%>". </p>
-          </div>
-          <% end %>
+          <%= render 'layouts/device/list' %>
 
         </div>
       </div>

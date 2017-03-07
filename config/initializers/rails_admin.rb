@@ -58,21 +58,24 @@ RailsAdmin.config do |config|
         field :type_question
         field :enunciation
         field :category
-
+        field :quiz
       end
-
       edit do
         field :enunciation
         field :type_question
-        field :category
-        field :alternatives
-
+        field :category do
+          inline_add false
+          inline_edit false
+        end
+        field :quiz do
+          inline_add false
+          inline_edit false
+        end
+        field :alternatives do
+          inline_add false
+        end
       end
-
-      show do
-
-      end
-end
+    end
 
 #------------Config avaliação ----------------------"
   config.model "Evaluation" do
@@ -96,42 +99,28 @@ end
 end
 #------------Config alternativa ----------------------"
   config.model "Alternative" do
-
     list do
       field :id
       field :description
       field :weight
-      field :kind
+      field :type_alternative
     end
-
     edit do
       field :description
       field :weight
-      field :kind
+      field :type_alternative
     end
-
-    show do
-
-    end
-end
-
+  end
 #------------Config cateogoria----------------------"
   config.model "Category" do
-
     list do
       field :id
       field :description
     end
-
     edit do
       field :description
     end
-
-    show do
-
-    end
-end
-
+  end
 #------------Config diagnosticos----------------------"
   config.model "Diagnostic" do
 
@@ -155,7 +144,6 @@ end
 end
 #------------Config dispositivos----------------------"
   config.model "Device" do
-
     list do
       field :id
       field :phone_img
@@ -166,7 +154,6 @@ end
       field :type_device
       field :mark
     end
-
     edit do
       field :phone_img
       field :model_device
@@ -176,45 +163,34 @@ end
       field :type_device
       field :mark
     end
-
     show do
 
     end
-
-end
+  end
 #------------Config marca ----------------------"
   config.model "Mark" do
-
     list do
       field :id
       field :name
     end
-
     edit do
       field :name
     end
-
-    show do
-
-    end
-
-end
+  end
 #------------Config tipo ----------------------"
-  config.model "Kind" do
-
-      list do
-        field :id
-        field :description
-      end
-
-      edit do
-        field :description
-      end
-
-      show do
-
-      end
-end
+  config.model "Quiz" do
+    list do
+      field :id
+      field :title
+      field :type
+    end
+    edit do
+      field :title
+      field :type
+      field :description
+      field :questions
+    end
+  end
 #--------------------------------------------------------------------#
   end
 end

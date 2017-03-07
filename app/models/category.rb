@@ -6,4 +6,9 @@ class Category < ActiveRecord::Base
       description
   end
 
+  def self.include_category
+    category = Category.order(:id)
+    category.includes(:questions).order(:id)
+  end
+
 end

@@ -1,12 +1,18 @@
 class Question < ActiveRecord::Base
 
- enum type_question:  [:accessibility, :usability]
+  enum type_question:  %w(accessibility usability)
+
   belongs_to :category
-  # belongs_to :kind
+  belongs_to :quiz
+
   has_and_belongs_to_many :alternatives
-  has_and_belongs_to_many :evaluations
 
-  
+  def name
+    enunciation
+  end
 
-  validates :enunciation, :type_question, :category, presence:true
+  def self.include_category
+    category = Category.order(:id)
+    category.includes(:questions).order(:id)
+  end
 end
