@@ -24,6 +24,6 @@ module TccOficial
     config.active_record.raise_in_transactional_callbacks = true
 
     ## PDFKIT
-    config.middleware.use PDFKit::Middleware, print_media_type: true
+    #config.middleware.use PDFKit::Middleware, print_media_type: true
   end
 end
