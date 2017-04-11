@@ -52,7 +52,7 @@ end
 
 group :development do
   gem 'better_errors'
-  #gem 'puma', '~> 3.0'
+  gem 'puma', '~> 3.0'
   gem 'web-console'
   gem 'mina', '0.3.8'
   gem 'rename'
