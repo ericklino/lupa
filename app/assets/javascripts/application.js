@@ -15,5 +15,3 @@
 //= require alert_message
 //= require turbolinks
 //= require_tree .
-//= require Chart.bundle
-//= require chartkick
