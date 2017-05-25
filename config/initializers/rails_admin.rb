@@ -51,11 +51,6 @@ RailsAdmin.config do |config|
       except ['About']
     end
 
-  config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
-    new
-
     # export
     bulk_delete
     # show
