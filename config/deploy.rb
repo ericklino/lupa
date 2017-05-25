@@ -20,10 +20,10 @@ end
 # Server Staging
 task :staging do
   set :rails_env, 'staging'
-  set :user, ''
-  set :domain, ''
-  set :deploy_to, ''
-  set :branch, ''
+  set :user, 'lupa'
+  set :domain, '192.168.1.150'
+  set :deploy_to, '/home/lupa/public_html/railsapp'
+  set :branch, 'deploy'
 end
 
 # Server development

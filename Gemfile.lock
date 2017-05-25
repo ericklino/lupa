@@ -167,7 +167,7 @@ GEM
     owlcarousel-rails (0.1.31)
       jquery-rails
     owlcarousel2-rails (2.1.0)
-    passenger (5.1.4)
+    passenger (5.1.2)
       rack
       rake (>= 0.8.1)
     perfect-scrollbar-rails (0.6.15)
