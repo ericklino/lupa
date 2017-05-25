@@ -6,7 +6,7 @@ SMTP_USER_NAME: 'sendmail@loginhost.com.br'
 SMTP_PASSWORD: 'w3case2022'
 
 # From email
-SMTP_FROM_MAIL: 'atendimento@w3case.com.br'
+SMTP_FROM_MAIL: 'erick@w3case.com.br'
 
 # Paths and URls
 UPLOAD_HOST: 'http://cdn1.localtest.me:3000/'

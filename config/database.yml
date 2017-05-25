@@ -2,7 +2,7 @@ development: &dev
   host: 127.0.0.1
   adapter: postgresql
   encoding: unicode
-  database: skeleton_dev
+  database: lupa_dev
   pool: 5
   username: postgres
   password: postgres
@@ -11,7 +11,7 @@ test: &test
   host: 127.0.0.1
   adapter: postgresql
   encoding: unicode
-  database: skeleton_test
+  database: lupa_test
   pool: 5
   username: postgres
   password: postgres

@@ -19,7 +19,7 @@ end
 
 # Server Staging
 task :staging do
-  set :rails_env, ''
+  set :rails_env, 'staging'
   set :user, ''
   set :domain, ''
   set :deploy_to, ''
@@ -147,8 +147,4 @@ task :'system:turnon' => :environment do
   queue %[echo -n "-----> Turn Off System: "]
   queue! %[cd "#{deploy_to}/current"]
   queue "RAILS_ENV=#{rails_env} bundle exec rake maintenance:end"
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
