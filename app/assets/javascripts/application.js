@@ -15,7 +15,6 @@
 //= require jquery_ujs
 //= require owl.carousel2
 //= require mask
-//= require galleria
 //= require perfect-scrollbar
 //= require jquery-ui/accordion
 //= require_tree ./scripts
