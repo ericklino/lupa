@@ -14,16 +14,16 @@ task :production do
   set :user, 'lupa'
   set :domain, 'app.w3case.net.br'
   set :deploy_to, '/home/lupa/public_html/railsapp'
-  set :branch, 'deploy'
+  set :branch, 'master'
 end
 
 # Server Staging
 task :staging do
   set :rails_env, 'staging'
-  set :user, 'prefeiturasidrolandia'
-  set :domain, '192.168.1.150'
-  set :deploy_to, '/home/prefeiturasidrolandia/public_html/railsapp'
-  set :branch, 'master'
+  set :user, ''
+  set :domain, ''
+  set :deploy_to, ''
+  set :branch, ''
 end
 
 # Server development
@@ -48,7 +48,6 @@ task :environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .rbenv-version to your repository.
   # invoke :'rbenv:load'
-
   # For those using RVM, use this to load an RVM version@gemset.
   invoke :"rvm:use[ruby-#{ruby_version}@#{user}]"
 end
