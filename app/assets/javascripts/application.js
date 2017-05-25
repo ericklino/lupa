@@ -5,9 +5,7 @@
 // or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-
-// compiled file.
-
+// compiled file. JavaScript code in this file should be added after the last require_* statement.
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
@@ -17,6 +15,9 @@
 //= require jquery_ujs
 //= require owl.carousel2
 //= require mask
+//= require galleria
+//= require perfect-scrollbar
+//= require jquery-ui/accordion
 //= require_tree ./scripts
 //= require turbolinks
 
@@ -39,14 +40,42 @@ document.addEventListener('turbolinks:load', function() {
     $('.slide')
   );
 
+  _owl.slide(
+    $('.fc-slide')
+  );
+
+  _owl.slide(
+    $('.page__gallery')
+  );
+
   // nav
   _nav.open(
     $('html'),
     $('.nav'),
     $('.nav__link'),
     $('.nav__btn'),
-    'nav--opened'bootstrap-wysihtml5-rails
+    'nav--opened'
   );
+
+  // galleria
+  var gallery = $('.gallery');
+
+  if(gallery.length) {
+    Galleria.loadTheme('/galleria/themes/classic/galleria.classic.js');
+    Galleria.run('.gallery');
+  }
+
+  // accordion
+  var accordion = $('.accordion');
+
+  if(accordion.length) {
+    accordion.accordion({
+      heightStyle: 'content'
+    });
+  }
+
+  // scrollbar
+  $('.services__list--scroll').perfectScrollbar();
 
   // mask
   $('.mask--phone').keydown(function() {
@@ -61,8 +90,3 @@ document.addEventListener('turbolinks:load', function() {
     }
   });
 });
-
-//= require jquery_ujs
-//= require alert_message
-//= require turbolinks
-//= require_tree .
