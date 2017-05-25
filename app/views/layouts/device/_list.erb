@@ -1,0 +1,15 @@
+<%if @device.present?%>
+  <% @device.each do |device| %>
+    <div id="divPBaixo"class="coluna-4 clearfix">
+      <div id="image-device">
+        <%= image_tag device.phone_img_url(:thumb)%>
+      </div>
+      <p id="name-device" class="centraliza"><%= device.model_device%> </p>
+      <%= link_to "Avaliar", evaluations_path(device), class: "btn btn-primary"  %>
+    </div>
+  <%end%>
+<%else%>
+  <div id="para-error">
+    <p id="trapezio-descendente">Desculpe-me porém, não foi encontrado nada com este nome: " <%= params[:search]%>". </p>
+  </div>
+<% end %>

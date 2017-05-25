@@ -1,0 +1,19 @@
+<div class="social">
+  <span class="social__caption">Compartilhar</span>
+
+  <a class="icon__btn icon__btn--tiny" target="_blank" href="http://www.facebook.com/share.php?u=<%= request.url %>&title=<%= @page_title %>">
+    <span class="ion-social-facebook"></span>
+  </a>
+
+  <a class="icon__btn icon__btn--tiny" target="_blank" href="http://twitter.com/intent/tweet?status=<%= @page_title %> - <%= request.url %>">
+    <span class="ion-social-twitter"></span>
+  </a>
+
+  <a class="icon__btn icon__btn--tiny" target="_blank" href="https://plus.google.com/share?url=<%= request.url %>">
+    <span class="ion-social-googleplus-outline"></span>
+  </a>
+
+  <a class="icon__btn icon__btn--tiny" href="whatsapp://send?text=<%= @page_title %> - <%= request.url %>" data-action="share/whatsapp/share">
+    <span class="ion-social-whatsapp-outline"></span>
+  </a>
+</div>

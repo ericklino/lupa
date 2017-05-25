@@ -1,0 +1,22 @@
+// social
+
+.social {
+
+}
+
+.social__caption {
+  display: block;
+
+  margin: 0 .2em .5em;
+
+  color: rgba($black, .5);
+  font-size: .7em;
+  text-transform: uppercase;
+}
+
+@include media($screen-md) {
+  .social__caption {
+    display: inline-block;
+    margin: 0 .25em;
+  }
+}

@@ -1,0 +1,62 @@
+// captcha
+
+.captcha {
+  position: relative;
+
+  @include row;
+}
+
+.captcha__field {
+  input {
+    @extend %form__fields;
+  }
+}
+
+.captcha__figure {
+  position: absolute;
+  bottom: .2em;
+  right: 6px;
+
+  img {
+    display: block;
+  }
+}
+
+.captcha__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1;
+
+  a {
+    display: inline-block;
+    height: 1.5em;
+    line-height: 1.5em;
+
+    color: $primary;
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:before {
+      content: "\f3b1";
+    }
+  }
+}
+
+@include media($screen-md) {
+  .captcha__figure {
+    bottom: .5em;
+  }
+}

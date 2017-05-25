@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+  <%= render 'layouts/includes/head_devise' %>
+
+  <body class="devise__body">
+    <%= render 'layouts/includes/alerts' %>
+
+  	<section class="container">
+  		<h1 class="devise__logo"><%= image_tag('admin/w3case.png') %></h1>
+
+			<div class="devise__content">
+	  		<h2 class="devise__title">Esqueceu sua senha?</h2>
+
+				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+				  <div class="devise__field">
+				  	<%= f.label :email, 'E-mail' %>
+				  	<%= f.email_field :email, autofocus: true, required: true %>
+				  </div>
+
+				  <div class="devise__submit">
+				  	<%= f.submit 'Enviar pedido', class: 'devise__btn' %>
+				  </div>
+				<% end %>
+			</div>
+
+			<div class="devise__links">
+				<%= render 'devise/shared/links' %>
+			</div>
+		</section>
+  </body>
+</html>

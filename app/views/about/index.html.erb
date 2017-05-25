@@ -1,0 +1,40 @@
+<article class="page">
+  <div class="container">
+    <div class="page__header">
+      <h1 class="page__title"><%= @about.title %></h1>
+      <h2 class="page__caption">Conheça um pouco da nossa história</h2>
+    </div>
+
+    <div class="page__text">
+      <% if !@about.images.empty? %>
+      <div class="page__gallery page__gallery--left">
+        <% @about.images.each do |image| %>
+          <figure class="page__figure">
+            <%= image_tag image.show, class: 'page__image' %>
+
+            <% if image.description.present? %>
+            <figcaption class="page__figcaption">
+              <%= image.description %>
+            </figcaption>
+            <% end %>
+          </figure>
+        <% end %>
+      </div>
+      <% end %>
+
+      <%= @about.content.html_safe %>
+    </div>
+
+    <div class="page__footer">
+      <div class="page__nav">
+        <%= link_to :back, class: 'link link--tiny' do %>
+        <span class="icon--left ion-ios-arrow-thin-left"></span> Voltar
+        <% end %>
+      </div>
+
+      <div class="page__social">
+        <%= render 'layouts/includes/social' %>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+  <%= render 'layouts/includes/head_devise' %>
+
+  <body class="devise__body">
+    <%= render 'layouts/includes/alerts' %>
+
+  	<section class="container">
+  		<h1 class="devise__logo"><%= image_tag('admin/w3case.png') %></h1>
+
+			<div class="devise__content">
+	  		<h2 class="devise__title">Trocar minha senha</h2>
+
+				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+				  <%= devise_error_messages! %>
+				  <%= f.hidden_field :reset_password_token %>
+
+				  <div class="devise__field">
+				  	<%= f.label :password, 'Nova senha' %>
+				    <%= f.password_field :password, autofocus: true, autocomplete: 'off', required: true %>
+				  </div>
+
+				  <div class="devise__field">
+				  	<%= f.label :password_confirmation, 'Confirmar nova senha' %>
+				    <%= f.password_field :password_confirmation, autocomplete: 'off', required: true %>
+				  </div>
+
+				  <div class="devise__submit">
+				  	<%= f.submit 'Salvar nova senha', class: 'devise__btn' %>
+				  </div>
+				<% end %>
+			</div>
+
+			<div class="devise__links">
+				<%= render 'devise/shared/links' %>
+			</div>
+		</section>
+  </body>
+</html>

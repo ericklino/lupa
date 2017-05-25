@@ -1,0 +1,189 @@
+// devise
+
+$devise-white: #fff;
+$devise-black: #000;
+$devise-primary: #1DB69B;
+
+.devise__body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+
+  line-height: 1.8;
+  padding: .2rem;
+  background: $devise-primary;
+
+  label,
+  input,
+  textarea,
+  button {
+    outline: none;
+
+    color: lighten($devise-black, 50%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+    font-weight: normal;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.devise__content {
+  width: 100%;
+
+  text-align: left;
+
+  padding: 2rem;
+
+  background: $devise-white;
+  border-radius: .2rem;
+}
+
+
+.devise__logo {
+  margin: 0;
+}
+
+.devise__title {
+  color: $devise-primary;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0 0 1rem;
+}
+
+
+.devise__field {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: .25rem;
+  }
+
+  input {
+    color: rgba($devise-black,.6);
+
+    width: 100%;
+
+    padding: .7rem .9rem;
+
+    border: 0;
+    border-radius: .2rem;
+    background: rgba($devise-black, .05);
+
+    box-shadow: inset 0 .1rem 0 rgba($devise-black, .05);
+
+    &:focus {
+      background: rgba($devise-black,.1);
+    }
+  }
+}
+
+.devise__checkbox {
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include transform(translateY(-50%));
+  }
+
+  label {
+    cursor: pointer;
+    display: block;
+    padding-left: 1.3rem;
+  }
+}
+
+.devise__submit {
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+.devise__btn {
+  cursor: pointer;
+
+  position: relative;
+  display: block;
+
+  width: 100%;
+
+  color: $devise-white !important;
+  font-size: .9em;
+  font-weight: 600 !important;
+
+  padding: .6rem 1.3rem;
+
+  border: 0;
+  border-radius: .2rem;
+  background: darken($devise-primary, 2%);
+  border-bottom: solid .15rem darken($devise-primary, 10%);
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: darken($devise-primary, 4%);
+  }
+
+  &:active {
+    top: .15rem;
+    padding: .65rem 1.3rem;
+    border: 0;
+  }
+}
+
+.devise__links {
+  padding-top: 1rem;
+
+  a {
+    color: $devise-white;
+    font-size: .9em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+@media screen and (min-width: 360px) {
+  .devise__body {
+    padding: 1.5rem;
+  }
+
+  .devise__content {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .devise__logo {
+    margin: 2rem 0 0;
+  }
+
+  .devise__col {
+    float: left;
+    width: 50%;
+  }
+
+  .devise__submit {
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .devise__btn {
+    display: inline-block;
+    width: auto;
+  }
+}

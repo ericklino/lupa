@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <%= favicon_link_tag 'icon.png' %>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= display_meta_tags og: { title: @page_title, description: @page_description, url: request.url, image: @page_image } %>
+    <%= csrf_meta_tags %>
+
+    <title><%= @page_title %></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag :modernizr %>
+  </head>
+
+  <body>
+    <%= render "layouts/includes/alerts" %>
+
+
+  <div class="main">
+    <%= yield %>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <small class="footer__small">
+        &copy 2017 - Todos os direitos reservados.
+      </small>
+
+      <div class="footer__author">
+        Desenvolvido por: <a class="footer__link" href="https://www.facebook.com/erick.linopedro">Linos's Enterprise</a>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

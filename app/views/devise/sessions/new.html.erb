@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+  <%= render 'layouts/includes/head_devise' %>
+
+  <body class="devise__body">
+    <%= render 'layouts/includes/alerts' %>
+
+  	<section class="container">
+  		<h1 class="devise__logo"><%= image_tag('admin/w3case.png') %></h1>
+
+			<div class="devise__content">
+	  		<h2 class="devise__title">Entrar</h2>
+
+				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+				  <div class="devise__field">
+				  	<%= f.label :email, 'E-mail' %>
+				  	<%= f.email_field :email, autofocus: true, required: true %>
+				  </div>
+
+				  <div class="devise__field">
+				  	<%= f.label :password, 'Senha' %>
+				    <%= f.password_field :password, autocomplete: 'off', required: true %>
+				  </div>
+
+					<div class="row">
+					  <% if devise_mapping.rememberable? -%>
+					    <div class="devise__col devise__checkbox">
+					    	<%= f.check_box :remember_me %>
+					    	<%= f.label :remember_me, 'Lembrar-me' %>
+					    </div>
+					  <% end -%>
+
+					  <div class="devise__col devise__submit">
+					  	<%= f.submit 'Entrar', class: 'devise__btn' %>
+					  </div>
+				  </div>
+				<% end %>
+			</div>
+
+			<div class="devise__links">
+				<%= render 'devise/shared/links' %>
+			</div>
+		</section>
+  </body>
+</html>

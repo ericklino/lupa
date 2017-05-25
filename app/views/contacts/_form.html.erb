@@ -1,0 +1,40 @@
+<%= form_for @contact, url: create_contact_path,
+    html: { class: "form" } do |f| %>
+  <div class="row">
+    <div class="form__field six">
+      <%= f.label :name, "Seu nome *", class: "form__label" %>
+      <%= f.text_field :name, class: "form__input", required: true, placeholder: 'Como podemos lhe chamar?' %>
+    </div>
+
+    <div class="form__field six">
+      <%= f.label :email, "Seu e-mail *", class: "form__label" %>
+      <%= f.email_field :email, class: "form__input", required: true, placeholder: 'Qual seu e-mail principal?' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form__field six">
+      <%= f.label :subject, "Assunto", class: "form__label" %>
+      <%= f.text_field :subject, class: "form__input", placeholder: 'Orçamento, elogio, crítica' %>
+    </div>
+
+    <div class="form__field six">
+      <%= f.label :phone, "Seu telefone", class: "form__label" %>
+      <%= f.text_field :phone, class: "form__input mask--phone", placeholder: 'Tem um telefone para contato?' %>
+    </div>
+  </div>
+
+  <div class="form__field">
+    <%= f.label :message, "Mensagem *", class: "form__label" %>
+    <%= f.text_area :message, class: 'form__textarea', required: true, placeholder: 'Descreva o que você deseja' %>
+  </div>
+
+  <div class="form__field">
+    <%= show_simple_captcha %>
+  </div>
+
+  <div class="form__submit">
+    <span class="form__info">(*) Campo necessários</span>
+    <%= f.submit "Enviar", class: 'btn btn--primary' %>
+  </div>
+<% end %>

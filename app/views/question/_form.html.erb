@@ -1,0 +1,39 @@
+<%= form_for @evaluation do |f| %>
+
+  <% @quiz.questions.include_category.each do |category|%>
+    <h2><%= category.name %></h2>
+
+    <% category.questions.each do |question|%>
+      <% if question.type_question == 'accessibility' %>
+        <div id="box-acessiblidade" class="col-lg-6 esquerda">
+          <h4><%= question.enunciation %> </h4>
+          <% question.alternatives.each do |alternative| %>
+            <div class="ajuste">
+              <input type="radio" class="poll__input" name="question[<%= question.id %>]" id="alternative-<%= alternative.id %>" value="<%= alternative.id %>">
+              <label class="poll__label" for="alternative-<%= alternative.id %>"><%= alternative.description %></label>
+            </div>
+          <% end %>
+          </div>
+        <% else %>
+          <div id="box-usabilidade" class="col-lg-6 direita">
+            <h4><%= question.enunciation %> </h4>
+            <% question.alternatives.each do |alternative| %>
+              <div class="ajuste">
+                <input type="radio" class="poll__input" name="question[<%= question.id %>]" id="alternative-<%= alternative.id %>" value="<%= alternative.id %>">
+                <label class="poll__label" for="alternative-<%= alternative.id %>"><%= alternative.description %></label>
+              </div>
+            <% end %>
+            </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <div id="painel" class="col-lg-12  clearfix">
+      <div class="painel">
+        <%= f.hidden_field :device_id, value: params[:id]    %>
+        <%= f.hidden_field :quiz_id, value: @quiz.id    %>
+        <%= f.submit "Avaliar" ,  class:"btn btn-success btn-large btn-medio"%>
+        <%= link_to "Cancelar", list_devices_path, class:"btn btn-large btn-grande btn-cancelar" %>
+      </div>
+    </div>
+<% end %>

@@ -1,0 +1,26 @@
+<link href="../../assets/stylesheets/simple-sidebar.css" rel="stylesheet">
+<div id="wrapper">
+  <%= render 'layouts/includes/menu' %>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <% if current_user.present? %>
+          <h1 id ="texto-titulo">Seleção de Dispositivos</h1>
+          <%else%>
+          <h1 id ="texto-titulo">Seleção de Dispositivos</h1>
+          <% end %>
+
+          <div id="box-search" class="clearfix">
+            <%= render 'layouts/device/search' %>
+          </div>
+
+          <%= render 'layouts/device/list' %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

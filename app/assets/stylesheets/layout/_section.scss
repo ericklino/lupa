@@ -1,0 +1,99 @@
+// section
+
+.section {
+  padding: 2rem 0;
+}
+
+.section--tiny {
+  padding: .5rem 0;
+}
+
+.section--secondary {
+  background: lighten($black, 4%);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section__header--hidden {
+  display: none;
+}
+
+.section__title {
+  margin: 0;
+
+  color: $primary;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.section__title--secondary {
+  color: rgba($white, .9);
+}
+
+.section__caption {
+  margin-top: .5rem;
+
+  color: lighten($black, 50%);
+  font-size: .8em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.section__text {
+  margin-bottom: 1rem;
+
+  @include row;
+  line-height: 1.6;
+
+  color: rgba($black, .8);
+  font-size: .8em;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.section__footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@include media($screen-md) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section--tiny {
+    padding: .5rem 0;
+  }
+
+  .section__header {
+    margin-bottom: 2rem;
+  }
+
+  .section__title {
+    font-size: 1.4em;
+  }
+
+  .section__caption {
+    font-size: 1em;
+  }
+
+  .section__text {
+    margin-bottom: 2rem;
+
+    line-height: 1.8;
+    font-size: 1em;
+  }
+
+  .section__footer {
+    margin-top: 2rem;
+  }
+}

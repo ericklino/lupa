@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+  <%= render 'layouts/includes/head_devise' %>
+
+  <body class="devise__body">
+    <%= render 'layouts/includes/alerts' %>
+
+  	<section class="container">
+  		<h1 class="devise__logo"><%= image_tag('admin/w3case.png') %></h1>
+
+			<div class="devise__content">
+	  		<h2 class="devise__title">Inscrever-se</h2>
+
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+				  <%= devise_error_messages! %>
+
+				  <div class="devise__field">
+				  	<%= f.label :email, 'E-mail' %>
+				  	<%= f.email_field :email, autofocus: true, required: true %>
+				  </div>
+
+				  <div class="devise__field">
+				  	<%= f.label :password, 'Senha' %><% if @validatable %><i>(Mínimo de <%= @minimum_password_length %> caracteres)</i><% end %>
+				    <%= f.password_field :password, autocomplete: "off", required: true %>
+				  </div>
+
+				  <div class="devise__field">
+				  	<%= f.label :password_confirmation, 'Confirmar senha' %>
+				    <%= f.password_field :password_confirmation, autocomplete: 'off' %>
+				  </div>
+
+				  <div class="devise__submit">
+				  	<%= f.submit 'Inscrever-se', class: 'devise__btn' %>
+				  </div>
+				<% end %>
+			</div>
+
+			<div class="devise__links">
+				<%= render 'devise/shared/links' %>
+			</div>
+		</section>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+// poll
+
+.poll {
+  margin-bottom: 2rem;
+}
+
+.poll__aside {
+  margin-bottom: 0;
+
+  .poll__question,
+  .poll__info {
+    text-align: center;
+  }
+
+  .poll__percentage {
+    font-size: .8em;
+  }
+}
+
+.poll__question {
+  margin: 0 0 1rem;
+
+  color: $primary;
+  font-size: .9em;
+  text-align: left;
+  line-height: 1.4;
+
+  display: block;
+}
+
+.poll__form {
+
+}
+
+.poll__list {
+  list-style: decimal;
+  padding: 0 0 1rem 1.25rem;
+
+  .poll__answer {
+    padding-left: 0;
+  }
+
+  .poll__label {
+    cursor: default;
+  }
+}
+
+.poll__answer {
+  position: relative;
+
+  color: rgba($black, .6);
+  font-size: .9em;
+  line-height: 1.4;
+
+  padding-left: 1.2rem;
+
+  + .poll__answer {
+    margin-top: .5rem;
+  }
+}
+
+.poll__label {
+  display: block;
+  cursor: pointer;
+}
+
+.poll__input {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.poll__info {
+  margin: 0;
+
+  color: rgba($black, .4);
+  font-size: .9em;
+}
+
+.poll__percentage {
+  margin-top: 4px;
+
+  color: $white;
+  font-size: .9em;
+
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: $primary;
+}
+
+.poll__submit {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+@include media($screen-md) {
+  .poll__aside {
+    .poll__question {
+      font-size: 1em;
+    }
+
+    .poll__answer {
+      font-size: .95em;
+    }
+  }
+
+  .poll__question {
+    font-size: 1.2em;
+  }
+
+  .poll__answer {
+    padding-left: 1.4rem;
+    font-size: 1em;
+  }
+}
