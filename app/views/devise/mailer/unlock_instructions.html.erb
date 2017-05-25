@@ -5,7 +5,7 @@
 <p>Click the link below to unlock your account:</p>
 
 <p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
-=======
+
 <p><%= t('.greeting', :recipient => @resource.email, :default => "Hello #{@resource.email}!") %></p>
 
 <p><%= t('.message', :default => "Your account has been locked due to an excessive amount of unsuccessful sign in attempts.") %></p>

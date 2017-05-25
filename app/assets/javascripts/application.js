@@ -61,9 +61,8 @@ document.addEventListener('turbolinks:load', function() {
     }
   });
 });
-=======
+
 //= require jquery_ujs
 //= require alert_message
 //= require turbolinks
 //= require_tree .
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
