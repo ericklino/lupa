@@ -8,8 +8,6 @@ set :ruby_version, '2.3.1'
 # Repository project
 set :repository, 'git@github.com:ericklino/lupa.git'
 
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
-
 # Server Production
 task :production do
   set :rails_env, 'production'
