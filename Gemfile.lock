@@ -339,6 +339,7 @@ DEPENDENCIES
   devise
   devise-i18n
   email_validator
+  execjs
   figaro
   friendly_id
   htmlcompressor
