@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 development: &dev
   host: 127.0.0.1
   adapter: postgresql
   encoding: unicode
   database: db_dev
+=======
+evelopment: &dev
+  host: 127.0.0.1
+  adapter: postgresql
+  encoding: unicode
+  database: tcc_oficial_dev
+>>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   pool: 5
   username: postgres
   password: postgres
@@ -11,7 +19,11 @@ test: &test
   host: 127.0.0.1
   adapter: postgresql
   encoding: unicode
+<<<<<<< HEAD
   database: db_test
+=======
+  database: tcc_oficial_test
+>>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   pool: 5
   username: postgres
   password: postgres

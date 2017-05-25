@@ -1,0 +1,49 @@
+
+<div id="wrapper">
+  <%= render 'layouts/menu' %>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <% if current_user.present? %>
+          <h1 class="centraliza">Minhas Avaliações</h1>
+          <%else%>
+          <h1>Minhas</h1>
+          <% end %>
+
+
+  <table id="table-evaluation" class="table">
+
+    <thead class="thead-default">
+      <tr class="table-evaluation-thead">
+        <th>Número Avaliação</th>
+        <th>Modelo do Aparelho</th>
+        <th>Prodiagnóstico Acessibilidade</th>
+        <th>Prodiagnóstico Usabilidade</th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% @evaluations.each do |eva| %>
+    <tr>
+      <th scope="row"><%=eva.id%></th>
+      <td><%=eva.device.model_device%></td>
+      <td><%= eva.score_acessibilidade %> pts -
+      <%= Diagnostic.result eva.score_acessibilidade, 0 %>
+      </td>
+      <td><%= eva.score_usabilidade %> pts -
+      <%= Diagnostic.result eva.score_usabilidade, 1 %>
+      </td>
+    </tr>
+    <%end%>
+  </tbody>
+  </table>
+
+  <%= paginate @evaluations, :theme => 'twitter-bootstrap-3'%>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

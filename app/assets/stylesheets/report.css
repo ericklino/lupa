@@ -1,0 +1,7 @@
+@media print {
+
+.titulo-pdf{
+  border: solid 1px black;
+}
+
+}

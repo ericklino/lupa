@@ -3,27 +3,30 @@ require 'mina/rails'
 require 'mina/git'
 require 'mina/rvm'
 
-set :ruby_version, ''
+set :ruby_version, '2.3.1'
 
 # Repository project
-set :repository, ''
+set :repository, 'git@github.com:ericklino/lupa.git'
+
+>>>>>>> 06bd80de00265842297bfebf74763c7eea639716
 
 # Server Production
 task :production do
   set :rails_env, 'production'
-  set :user, ''
-  set :domain, ''
-  set :deploy_to, '/home/XXXXX/public_html/railsapp'
+  set :user, 'lupa'
+  set :domain, 'app.w3case.net.br'
+  set :deploy_to, '/home/lupa/public_html/railsapp'
   set :branch, 'master'
 end
 
 # Server Staging
 task :staging do
-  set :rails_env, 'staging'
+  set :rails_env, ''
   set :user, ''
   set :domain, ''
-  set :deploy_to, '/home/XXXXX/public_html/railsapp'
-  set :branch, 'master'
+  set :deploy_to, ''
+  set :branch, ''
+
 end
 
 # Server development
@@ -146,4 +149,8 @@ task :'system:turnon' => :environment do
   queue %[echo -n "-----> Turn Off System: "]
   queue! %[cd "#{deploy_to}/current"]
   queue "RAILS_ENV=#{rails_env} bundle exec rake maintenance:end"
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 06bd80de00265842297bfebf74763c7eea639716

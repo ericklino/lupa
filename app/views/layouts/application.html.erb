@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html class="no-js" lang="pt-br">
   <head>
     <%= favicon_link_tag 'icon.png' %>
@@ -39,4 +40,18 @@
     </div>
   </footer>
   </body>
+=======
+<html>
+<head>
+  <title>TccOficial</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render "layouts/alerts" %>
+<%= yield %>
+
+</body>
+>>>>>>> 06bd80de00265842297bfebf74763c7eea639716
 </html>

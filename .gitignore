@@ -24,9 +24,8 @@
 .byebug_history
 
 # Ignore application configuration
-/config/application.yml
-/config/database.yml
-/config/secrets.yml
+
+
 
 # Ignore rubymine
 /.idea/

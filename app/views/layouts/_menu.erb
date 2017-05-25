@@ -1,0 +1,21 @@
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <a href="/home"><i class="fa fa-search span-menu"></i>LUPA</a>
+    </li>
+    <li>
+      <a href="/dispositivos"><i id="" class="fa fa-desktop fa-lg  span-menu"></i>Dispositivos</a>
+    </li>
+    <li>
+      <a href="/minhasavaliacoes"><i class="fa fa-pencil fa-lg span-menu" ></i>Minhas Avaliações</a
+    </li>
+    <li>
+      <a href="<%= device_seletion_path%>"><i class="fa fa-book fa-lg span-menu"></i>Relatório</a>
+    </li>
+    <li>
+    <%= link_to  destroy_user_session_path, method: :delete do%>
+      <i class="fa fa-sign-out fa-lg span-menu"></i>Sair
+    <%end%>
+    </li>
+  </ul>
+</div>
