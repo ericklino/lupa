@@ -1,5 +1,4 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-<<<<<<< HEAD
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -25,7 +24,7 @@ Evaluation.create([
   { date_evaluation: nil, status: true, user_id: 1, device_id: 1, created_at: "2017-05-18 14:53:21", updated_at: "2017-05-18 14:53:21", score_usabilidade: 0, score_acessibilidade: 10, quiz_id: 1 },
   { date_evaluation: nil, status: true, user_id: 1, device_id: 1, created_at: "2017-05-18 14:53:21", updated_at: "2017-05-18 14:53:21", score_usabilidade: 0, score_acessibilidade: 10, quiz_id: 1 },
 ])
-=======
+
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+
 # encoding: UTF-8
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -14,16 +12,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170518194347) do
-=======
-ActiveRecord::Schema.define(version: 20170306204833) do
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
+
   create_table "about_images", force: :cascade do |t|
     t.string   "image"
     t.integer  "about_id"
@@ -40,8 +35,6 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   create_table "alternatives", force: :cascade do |t|
     t.string   "description"
     t.integer  "weight"
@@ -53,25 +46,20 @@ ActiveRecord::Schema.define(version: 20170306204833) do
   create_table "alternatives_questions", id: false, force: :cascade do |t|
     t.integer "question_id",    null: false
     t.integer "alternative_id", null: false
-<<<<<<< HEAD
     t.index ["alternative_id", "question_id"], name: "index_alternatives_questions_on_alternative_id_and_question_id", using: :btree
     t.index ["question_id", "alternative_id"], name: "index_alternatives_questions_on_question_id_and_alternative_id", using: :btree
-  end
-
-=======
   end
 
   add_index "alternatives_questions", ["alternative_id", "question_id"], name: "index_alternatives_questions_on_alternative_id_and_question_id", using: :btree
   add_index "alternatives_questions", ["question_id", "alternative_id"], name: "index_alternatives_questions_on_question_id_and_alternative_id", using: :btree
 
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
   create_table "categories", force: :cascade do |t|
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-<<<<<<< HEAD
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -82,8 +70,6 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   create_table "devices", force: :cascade do |t|
     t.string   "model_device"
     t.string   "processor"
@@ -94,26 +80,19 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.integer  "mark_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-<<<<<<< HEAD
     t.index ["mark_id"], name: "index_devices_on_mark_id", using: :btree
-  end
-
-=======
   end
 
   add_index "devices", ["mark_id"], name: "index_devices_on_mark_id", using: :btree
 
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
   create_table "diagnostics", force: :cascade do |t|
     t.text     "description"
     t.integer  "score"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "type_diagnostic"
-<<<<<<< HEAD
     t.string   "name"
-=======
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   end
 
   create_table "evaluations", force: :cascade do |t|
@@ -126,20 +105,15 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.integer  "score_usabilidade"
     t.integer  "score_acessibilidade"
     t.integer  "quiz_id"
-<<<<<<< HEAD
     t.index ["device_id"], name: "index_evaluations_on_device_id", using: :btree
     t.index ["quiz_id"], name: "index_evaluations_on_quiz_id", using: :btree
     t.index ["user_id"], name: "index_evaluations_on_user_id", using: :btree
-  end
-
-=======
   end
 
   add_index "evaluations", ["device_id"], name: "index_evaluations_on_device_id", using: :btree
   add_index "evaluations", ["quiz_id"], name: "index_evaluations_on_quiz_id", using: :btree
   add_index "evaluations", ["user_id"], name: "index_evaluations_on_user_id", using: :btree
 
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   create_table "marks", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -153,16 +127,11 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "quiz_id"
-<<<<<<< HEAD
     t.index ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
-  end
-
-=======
   end
 
   add_index "questions", ["quiz_id"], name: "index_questions_on_quiz_id", using: :btree
 
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   create_table "quizzes", force: :cascade do |t|
     t.string   "title"
     t.integer  "type"
@@ -171,7 +140,6 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.datetime "updated_at",  null: false
   end
 
-<<<<<<< HEAD
   create_table "simple_captcha_data", force: :cascade do |t|
     t.string   "key",        limit: 40
     t.string   "value",      limit: 6
@@ -187,8 +155,6 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -198,7 +164,6 @@ ActiveRecord::Schema.define(version: 20170306204833) do
     t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-<<<<<<< HEAD
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             null: false
@@ -210,7 +175,7 @@ ActiveRecord::Schema.define(version: 20170306204833) do
   end
 
   add_foreign_key "about_images", "abouts"
-=======
+
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                             null: false
@@ -221,7 +186,7 @@ ActiveRecord::Schema.define(version: 20170306204833) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
   add_foreign_key "devices", "marks"
   add_foreign_key "evaluations", "devices"
   add_foreign_key "evaluations", "quizzes"

@@ -11,29 +11,21 @@ class Device < ActiveRecord::Base
     attributes :model_device, :processor, :os, :type_device
   end
 
-<<<<<<< HEAD
-
 
   def cont_eval
     evaluations.count
   end
 
-
-
-
-=======
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
   # def self.search(search)
   #   where("model_device like ?", "%#{search}%")
   # end
 
-<<<<<<< HEAD
+
   def percent_of_evaluation(eval_spec)
     percent = 0
     percent = (eval_spec * 100 / cont_eval)
     percent > 0 ? percent.to_s << "%" :percent
   end
 
-=======
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
 end

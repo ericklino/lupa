@@ -2,7 +2,7 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
-<<<<<<< HEAD
+
   ################  Global configuration  ################
   config.main_app_name = ['Área administrativa']
   config.default_items_per_page = 20
@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
 
   ## == Pundit ==
   # config.authorize_with :pundit
-=======
+
   ## == Devise ==
   config.authenticate_with do
      warden.authenticate! scope: :user
@@ -32,14 +32,14 @@ RailsAdmin.config do |config|
    config.navigation_static_links = {
   'Relatórios' => 'http://www.google.com'
 }
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
-<<<<<<< HEAD
+
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar false
@@ -50,30 +50,30 @@ RailsAdmin.config do |config|
     new do
       except ['About']
     end
-=======
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
     new
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
     # export
     bulk_delete
     # show
     edit
-<<<<<<< HEAD
+
     delete do
       except ['About']
     end
-=======
+
     delete
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
     # show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
     # history_show
 
-<<<<<<< HEAD
+
     ###  User  ###
     config.model 'User' do
       # navigation_label 'Gerenciar usuários'
@@ -131,7 +131,7 @@ RailsAdmin.config do |config|
         field :description
       end
     end
-=======
+
     # config.model "User" do
     #   list do
     #     field :id
@@ -289,6 +289,6 @@ end
     end
   end
 #--------------------------------------------------------------------#
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
   end
 end

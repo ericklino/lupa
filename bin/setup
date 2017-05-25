@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'pathname'
-<<<<<<< HEAD
 require 'fileutils'
 include FileUtils
 
@@ -32,7 +31,7 @@ chdir APP_ROOT do
 
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'
-=======
+
 
 # path to your application root.
 APP_ROOT = Pathname.new File.expand_path('../../',  __FILE__)
@@ -59,5 +58,5 @@ Dir.chdir APP_ROOT do
 
   puts "\n== Restarting application server =="
   system "touch tmp/restart.txt"
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
+
 end
