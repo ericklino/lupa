@@ -52,15 +52,21 @@ RailsAdmin.config do |config|
     end
 
     # export
-    bulk_delete
+    bulk_delete do
+      
+    end
     # show
-    edit
+    edit do
+
+    end
 
     delete do
       except ['About']
     end
 
-    delete
+    delete do
+
+    end
 
     # show_in_app
 
