@@ -39,4 +39,3 @@ User.new({
   password_confirmation: '12345678',
   admin: true
 }).save
->>>>>>> 06bd80de00265842297bfebf74763c7eea639716
